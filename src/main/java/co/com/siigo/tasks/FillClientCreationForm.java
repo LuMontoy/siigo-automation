@@ -28,7 +28,7 @@ public class FillClientCreationForm implements Task {
                 selectOptionFromShadowList()
                         .inTheHost(driver, DOCUMENT_TYPE_DROPDOWN_HOST, LIST_INNER),
                 typeIntoShadowInput()
-                        .withValue("1111111")
+                        .withValue("111222255")
                         .intoShadowHost(driver, IDENTIFICATION_INPUT_HOST, IDENTIFICATION_INPUT_INNER),
                 typeIntoShadowInput()
                         .withValue("Lu")
