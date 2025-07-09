@@ -11,7 +11,7 @@ public class Client {
     String name;
     String lastName;
 
-    String contactName;
+    String city;
     String contactLastName;
     String contactMail;
     String contactRol;

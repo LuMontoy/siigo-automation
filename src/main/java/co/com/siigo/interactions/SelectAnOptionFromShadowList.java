@@ -11,9 +11,15 @@ import java.util.List;
 public class SelectAnOptionFromShadowList implements Interaction {
 
     List<WebElement> list;
+    int index;
 
     public SelectAnOptionFromShadowList inTheHost(WebDriver driver, String host, String inner) {
         this.list = ShadowElement.getShadowElementsList(driver, host, inner);
+        return this;
+    }
+
+    public SelectAnOptionFromShadowList witheThIndex(int index) {
+        this.index = index;
         return this;
     }
 
