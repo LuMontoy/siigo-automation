@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="1" failures="0" name="Creacion de clientes" skipped="0" tests="1" time="0.16" timestamp="2025-07-07 09:58:55"><testcase name="creacion exitosa de un cliente tipo proveedor"><error message="Cannot invoke &quot;co.com.siigo.models.User.setMail(String)&quot; because &quot;this.user&quot; is null" type="java.lang.NullPointerException">Cannot invoke "co.com.siigo.models.User.setMail(String)" because "this.user" is null</error><system-err>Cannot invoke "co.com.siigo.models.User.setMail(String)" because "this.user" is null&#13;
+co.com.siigo.stepdefinitions.LoginStepDefinition.setUp(LoginStepDefinition.java:35)&#13;
+</system-err></testcase></testsuite>
