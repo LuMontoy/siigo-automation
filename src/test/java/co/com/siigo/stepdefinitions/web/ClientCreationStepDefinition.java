@@ -22,7 +22,7 @@ import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isPres
 import static net.serenitybdd.screenplay.questions.WebElementQuestion.the;
 import static org.hamcrest.CoreMatchers.equalTo;
 
-public class LoginStepDefinition {
+public class ClientCreationStepDefinition {
 
     private User user;
     private static final EnvironmentVariables environmentVariables =
@@ -47,8 +47,8 @@ public class LoginStepDefinition {
         );
     }
 
-    @And("llena los campos obligatorios para un tipo de cliente persona")
-    public void llenaLosCamposObligatoriosParaUnTipoDeClientePersona() {
+    @And("llena los campos obligatorios para cliente tipo persona")
+    public void llenaLosCamposObligatoriosParaClienteTipoPersona() {
         WebClient newClient = WebFakeClient.getNewFakeClient();
 
         theActorInTheSpotlight().wasAbleTo(

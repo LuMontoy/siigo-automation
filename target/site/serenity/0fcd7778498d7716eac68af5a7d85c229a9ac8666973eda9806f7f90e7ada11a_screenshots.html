@@ -1,0 +1,289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0.min.js"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="35614beebef3d0ce503a520c2814b8bbb3fce85253265bc2e774a2b2532fd15f.html">Creacion De Clientes</a></span>
+                > <span class="truncate-60"><a
+                    href="0fcd7778498d7716eac68af5a7d85c229a9ac8666973eda9806f7f90e7ada11a.html">creacion exitosa de un cliente tipo persona </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="bi bi-chat-text"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 09-07-2025 13:50</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Creacion De Clientes </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="34658a1663fcf042bd7acb3325affbe4e647c8acd84d0228be2f52e1381e61b9.html">10 To 30 Seconds
+                                        (Duration)
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">creacion exitosa de un cliente tipo persona
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="5f8eb2f5a8ce6b8b3698c637429609acb9fbb8e7e6efc7f99765e16d31324a5c.png" title=" User opens the Login page" width="0"/>
+                <img src="5f8eb2f5a8ce6b8b3698c637429609acb9fbb8e7e6efc7f99765e16d31324a5c.png" title=" User opens the Login page" width="0"/>
+                <img src="d5df1aa9c60a9cad31a8f85b1ba6cfd4167f98ab040cc28af722306e3030132e.png" title=" Given el usuario inicio sesion en el aplicativo" width="0"/>
+                <img src="d5df1aa9c60a9cad31a8f85b1ba6cfd4167f98ab040cc28af722306e3030132e.png" title=" User do login" width="0"/>
+                <img src="d5df1aa9c60a9cad31a8f85b1ba6cfd4167f98ab040cc28af722306e3030132e.png" title=" User enters 'retoautomationsiigo@yopmail.com' into MAIL_INPUT" width="0"/>
+                <img src="d5df1aa9c60a9cad31a8f85b1ba6cfd4167f98ab040cc28af722306e3030132e.png" title=" User enters 'T4b4ck0ff1c3P455w0rd658*' into PASSWORD_INPUT" width="0"/>
+                <img src="951db1db7fe5d556103d3273934dbe81b9a1d2bb1a20762a683fb74a8ff58261.png" title=" User enters 'T4b4ck0ff1c3P455w0rd658*' into PASSWORD_INPUT (completed)" width="0"/>
+                <img src="951db1db7fe5d556103d3273934dbe81b9a1d2bb1a20762a683fb74a8ff58261.png" title=" User clicks on CONTINUE_BUTTON" width="0"/>
+                <img src="c9427e689b61f1e66474475cfb418af3f10e48e0ccbb35ecd8b630ec7f7686c2.png" title=" User clicks on CONTINUE_BUTTON (completed)" width="0"/>
+                <img src="c9427e689b61f1e66474475cfb418af3f10e48e0ccbb35ecd8b630ec7f7686c2.png" title=" User do login (completed)" width="0"/>
+                <img src="c9427e689b61f1e66474475cfb418af3f10e48e0ccbb35ecd8b630ec7f7686c2.png" title=" Given el usuario inicio sesion en el aplicativo (completed)" width="0"/>
+                <img src="3354486822744f9a6d67ef7284fd9a751a719f54c62701a172eddaae156de971.png" title=" When se dirige al modulo de creacion de clientes" width="0"/>
+                <img src="3354486822744f9a6d67ef7284fd9a751a719f54c62701a172eddaae156de971.png" title=" User press create button" width="0"/>
+                <img src="418e3b07d66e245a96ad0ab252e31a4e1aa1af9be94192b3a98aab9cd22ad1b1.png" title=" User click shadow button" width="0"/>
+                <img src="4c3b5dc093c70e395be51a0e86dfb4687955ada2ca3f78f8ddc60dddab3745ef.png" title=" User click shadow button (completed)" width="0"/>
+                <img src="4c3b5dc093c70e395be51a0e86dfb4687955ada2ca3f78f8ddc60dddab3745ef.png" title=" User press create button (completed)" width="0"/>
+                <img src="4c3b5dc093c70e395be51a0e86dfb4687955ada2ca3f78f8ddc60dddab3745ef.png" title=" User select client option" width="0"/>
+                <img src="b870542b9c39f94e83045da8298f5a681339606771f1cedcc8c52349f4c8ec55.png" title=" User click shadow button" width="0"/>
+                <img src="79f9d1d654b02d0166d3e0e46f35a5ce0d8c283b3292b448519299fc3640692a.png" title=" User click shadow button (completed)" width="0"/>
+                <img src="79f9d1d654b02d0166d3e0e46f35a5ce0d8c283b3292b448519299fc3640692a.png" title=" User select client option (completed)" width="0"/>
+                <img src="361c846dc17bc5a1eb708dccd24e51126c31b2715fa2564d71ccf006de3f537d.png" title=" When se dirige al modulo de creacion de clientes (completed)" width="0"/>
+                <img src="e300a7da56cf5442878a1d4245a9e348cc861c0c2baf8ae5c3e7a1cd8ad13620.png" title=" And llena los campos obligatorios para cliente tipo persona" width="0"/>
+                <img src="e300a7da56cf5442878a1d4245a9e348cc861c0c2baf8ae5c3e7a1cd8ad13620.png" title=" User fill client creation form" width="0"/>
+                <img src="85b0a86cd6c3571a2cc9e33d8db3d8cf0d59876055182945e5913b9cbafabbf8.png" title=" User click shadow button" width="0"/>
+                <img src="b56dd023916845d7611686d8f11be975178e3a2f4ee4f6fb9033435ed2a60be5.png" title=" User click shadow button (completed)" width="0"/>
+                <img src="60b95922b85dd306dc3ea549a4c475fc04983a8439c4221b77dd88762dc6f159.png" title=" User select an option from shadow list" width="0"/>
+                <img src="1685702df574cd1dc0b74119210e22e1f97b8799f2f84348b85e67e095301996.png" title=" User select an option from shadow list (completed)" width="0"/>
+                <img src="1685702df574cd1dc0b74119210e22e1f97b8799f2f84348b85e67e095301996.png" title=" User select an option from shadow list" width="0"/>
+                <img src="08e4447c6ecd47c978061466e2a19114fd2e4317a27234643352b3db6b980bc2.png" title=" User select an option from shadow list (completed)" width="0"/>
+                <img src="08e4447c6ecd47c978061466e2a19114fd2e4317a27234643352b3db6b980bc2.png" title=" User select an option from shadow list" width="0"/>
+                <img src="faaaeda6c81263b2ed9947c46dac4b4a19e9878ca927204ff6e7694e8c95fb09.png" title=" User select an option from shadow list (completed)" width="0"/>
+                <img src="faaaeda6c81263b2ed9947c46dac4b4a19e9878ca927204ff6e7694e8c95fb09.png" title=" User type into shadow input" width="0"/>
+                <img src="3d3ce3bf0fe81ac047a2d3df3824fac52d7ef6a45a569aefd03a924b39237fa2.png" title=" User type into shadow input (completed)" width="0"/>
+                <img src="3d3ce3bf0fe81ac047a2d3df3824fac52d7ef6a45a569aefd03a924b39237fa2.png" title=" User type into shadow input" width="0"/>
+                <img src="f5ee24ace131acbc543eb39d94a45b5a38c01fcd04877c4812eed559221ad4d4.png" title=" User type into shadow input (completed)" width="0"/>
+                <img src="f5ee24ace131acbc543eb39d94a45b5a38c01fcd04877c4812eed559221ad4d4.png" title=" User type into shadow input" width="0"/>
+                <img src="9ae42e8acfa146d97f27ff5e78f6b892d25c0e5e0534ae2738baceee2ad878bd.png" title=" User type into shadow input (completed)" width="0"/>
+                <img src="9ae42e8acfa146d97f27ff5e78f6b892d25c0e5e0534ae2738baceee2ad878bd.png" title=" User click shadow button" width="0"/>
+                <img src="da5364232eb684a65cdb1efa4ee789f1132856b405ce9daccbda3aa166848d90.png" title=" User click shadow button (completed)" width="0"/>
+                <img src="da5364232eb684a65cdb1efa4ee789f1132856b405ce9daccbda3aa166848d90.png" title=" User type into shadow input" width="0"/>
+                <img src="1ddb5f0d83b6c29a6ab5780d11e0c20defb7efd8fa667cc6fbd97d17bd7fbe0e.png" title=" User type into shadow input (completed)" width="0"/>
+                <img src="1ddb5f0d83b6c29a6ab5780d11e0c20defb7efd8fa667cc6fbd97d17bd7fbe0e.png" title=" User select city from table" width="0"/>
+                <img src="7d4d34450cbf7887782a15877cac6bbed59b20ea1937352bb35126d55691ba96.png" title=" User select an option from shadow table" width="0"/>
+                <img src="15742a852d58446d1ab3bb258ccc6f3bc09d79af8cac91b03e6c84cc2621ddd7.png" title=" User select an option from shadow table (completed)" width="0"/>
+                <img src="15742a852d58446d1ab3bb258ccc6f3bc09d79af8cac91b03e6c84cc2621ddd7.png" title=" User select city from table (completed)" width="0"/>
+                <img src="15742a852d58446d1ab3bb258ccc6f3bc09d79af8cac91b03e6c84cc2621ddd7.png" title=" User clicks on SAVE_BUTTON" width="0"/>
+                <img src="9ef73205c8185148bc7f0fded8ee6c5bcc23212d31a4f8773da8e57187a1ee29.png" title=" User clicks on SAVE_BUTTON (completed)" width="0"/>
+                <img src="9ef73205c8185148bc7f0fded8ee6c5bcc23212d31a4f8773da8e57187a1ee29.png" title=" User fill client creation form (completed)" width="0"/>
+                <img src="9ef73205c8185148bc7f0fded8ee6c5bcc23212d31a4f8773da8e57187a1ee29.png" title=" And llena los campos obligatorios para cliente tipo persona (completed)" width="0"/>
+                <img src="28a4aba2a80aba5063eac492fa528f04a127a5090096aded16e285cda00e8403.png" title=" Then visualizara un mensaje de creacion exitosa" width="0"/>
+                <img src="b3778a9e3a70280e10c8857b2ff8ca3fc383c7ce86dc32275f7cfb01b7a6e2ab.png" title=" Then get toast text should be 'Tercero guardado exitosamente'" width="0"/>
+                <img src="baa2c2f3144c97b62c88abbbf085b237c325082411fa51e77e7193309846335b.png" title=" Then get toast text should be 'Tercero guardado exitosamente' (completed)" width="0"/>
+                <img src="baa2c2f3144c97b62c88abbbf085b237c325082411fa51e77e7193309846335b.png" title=" Then visualizara un mensaje de creacion exitosa (completed)" width="0"/>
+                <img src="e8b3d8481c4b1e86d8e3faf4c9b1a63434757e5ad8c57cab632255b1025ca35a.png" title=" And sera redirigido al perfil del cliente creado" width="0"/>
+                <img src="e8b3d8481c4b1e86d8e3faf4c9b1a63434757e5ad8c57cab632255b1025ca35a.png" title=" Then The profile client title should be an element that is present" width="0"/>
+
+                <img src="e8b3d8481c4b1e86d8e3faf4c9b1a63434757e5ad8c57cab632255b1025ca35a.png" title=" And sera redirigido al perfil del cliente creado (completed): <span class='success-color'>SUCCESS</span>" width="0"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 4.0.46</span>
+</div>
+</body>
+</html>
