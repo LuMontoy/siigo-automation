@@ -18,6 +18,9 @@ import net.thucydides.model.util.EnvironmentVariables;
 import org.openqa.selenium.WebDriver;
 
 import static co.com.siigo.tasks.DoLogin.doLogin;
+import static co.com.siigo.tasks.FillClientCreationForm.fillClientCreationForm;
+import static co.com.siigo.tasks.PressCreateButton.pressCreateButton;
+import static co.com.siigo.tasks.SelectClientOption.selectClientOption;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
@@ -56,10 +59,18 @@ public class LoginStepDefinition {
 
     @And("navego hasta el modulo de creacion de clientes")
     public void navegoHastaElModuloDeCreacionDeClientes() {
+        theActorInTheSpotlight().wasAbleTo(
+                pressCreateButton(),
+                selectClientOption()
+        );
     }
 
     @When("llena el formulario con los campos obligatorios")
-    public void llenaElFormularioConLosCamposObligatorios() {
+    public void llenaElFormularioConLosCamposObligatorios() throws InterruptedException {
+        theActorInTheSpotlight().wasAbleTo(
+                fillClientCreationForm()
+        );
+        Thread.sleep(10000);
     }
 
     @Then("visualizara el cliente creado en el modulo de terceros")
