@@ -3,7 +3,7 @@ package co.com.siigo.models.web;
 import lombok.Data;
 
 @Data
-public class Client {
+public class WebClient {
 
     String clientType;
     String idType;

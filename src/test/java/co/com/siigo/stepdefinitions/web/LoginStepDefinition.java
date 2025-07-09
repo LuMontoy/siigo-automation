@@ -1,8 +1,8 @@
 package co.com.siigo.stepdefinitions.web;
 
-import co.com.siigo.models.web.Client;
+import co.com.siigo.models.web.WebClient;
 import co.com.siigo.models.web.User;
-import co.com.siigo.utils.web.FakeClient;
+import co.com.siigo.utils.web.WebFakeClient;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -49,7 +49,7 @@ public class LoginStepDefinition {
 
     @And("llena los campos obligatorios para un tipo de cliente persona")
     public void llenaLosCamposObligatoriosParaUnTipoDeClientePersona() {
-        Client newClient = FakeClient.getNewFakeClient();
+        WebClient newClient = WebFakeClient.getNewFakeClient();
 
         theActorInTheSpotlight().wasAbleTo(
                 fillClientCreationForm().withTheclient(newClient)

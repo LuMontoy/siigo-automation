@@ -1,6 +1,6 @@
 package co.com.siigo.tasks.web;
 
-import co.com.siigo.models.web.Client;
+import co.com.siigo.models.web.WebClient;
 import com.github.javafaker.Faker;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -18,10 +18,10 @@ import static co.com.siigo.userinterfaces.CreateClientPage.*;
 
 public class FillClientCreationForm implements Task {
 
-    Client client;
+    WebClient client;
     Faker faker = new Faker(new Locale("es", "CO"));
 
-    public FillClientCreationForm withTheclient(Client client) {
+    public FillClientCreationForm withTheclient(WebClient client) {
         this.client = client;
         return this;
     }
