@@ -30,6 +30,7 @@ dependencies {
     implementation "net.serenity-bdd:serenity-screenplay-webdriver:${serenityVersion}"
     implementation "net.serenity-bdd:serenity-screenplay-rest:${serenityRestVersion}"
     implementation "io.rest-assured:rest-assured:${restAssuredVersion}"
+    implementation 'com.github.javafaker:javafaker:1.0.2'
 
     testImplementation "junit:junit:${junitVersion}"
 }
