@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features = "src/test/resources/features/services/actualizacionCliente.feature",
+        features = "src/test/resources/features/services/clientUpdate.feature",
         glue = "co.com.siigo.stepdefinitions.services",
         snippets = CucumberOptions.SnippetType.CAMELCASE
 )
